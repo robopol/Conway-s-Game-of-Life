@@ -82,8 +82,6 @@ def creative_mode(grid, cell_size, screen, settings):
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
-                pygame.display.quit()
-                return False, grid
             elif event.type == pygame.MOUSEBUTTONDOWN:
                 mouse_x, mouse_y = event.pos
                 grid_x = mouse_y // cell_size[1]
@@ -171,9 +169,9 @@ def start_gui(settings):
             pygame.display.set_caption("Creative Mode - Conway's Game of Life")
             cell_size = (resolution[0] // cols, resolution[1] // rows)
             creative_mode_running, edited_grid = creative_mode(edited_grid, cell_size, screen, settings)
+            pygame.display.quit()
             if creative_mode_running:
                 start_simulation_button.grid(column=2, row=12, sticky=tk.W)
-            pygame.quit()
 
     def start_simulation():
         rows = int(rows_entry.get())
@@ -181,7 +179,8 @@ def start_gui(settings):
         speed = int(speed_entry.get())
         full_screen = bool(fullscreen_var.get())
         resolution = tuple(map(int, resolution_entry.get().split('x')))
-        setup_grid()
+        if not creative_mode_var.get():
+            setup_grid()
         run_game(rows, cols, speed, full_screen, resolution, settings, edited_grid)
     
     root = tk.Tk()
