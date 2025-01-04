@@ -7,7 +7,6 @@ Randomized Initial Grid, Specific Patterns, or Symmetric Patterns: Choose betwee
 Adjustable Colors for Background, Cells, and Grid: Customize the background color, live cell color, and grid lines color.
 Resizable Canvas: Set the width and height of the game canvas to fit your display.
 Symmetric Patterns: Generate symmetric patterns by specifying the size of a square, which is then mirrored across both x and y axes, resulting in four symmetric squares centered on the canvas.
-Blurred Background with Equations: A visually appealing background featuring mathematical equations with a blur effect.
 Random Cell Colors: Option to render each live cell with a randomly generated color for dynamic visuals.
 Creative Mode: Manually toggle the state of individual cells by clicking on them within the grid, allowing for custom configurations.
 Installation
