@@ -1,6 +1,7 @@
 # Conway's Game of Life
 
 A web-based implementation of Conway's Game of Life featuring an interactive graphical user interface for configuring initial parameters and patterns.
+![Conway online game](assets/screencapture-Conway-game.png)
 
 ## Features
 
